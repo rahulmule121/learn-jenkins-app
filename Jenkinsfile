@@ -37,14 +37,14 @@ pipeline {
                     steps {
                         sh '''
                             test -f build/index.html
-                            npm jest
+                            npm test
                         '''
                     }
-                    post {
+                   /* post {
                         always {
                             junit 'jest-results/junit.xml'
                         }
-                    }
+                    }*/
                 }
 
                 stage('E2E') {
